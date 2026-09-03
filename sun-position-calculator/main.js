@@ -42,7 +42,8 @@ function calculateSunPosition() {
 
     // Calculate the Sun's apparent longitude
     const omega = 125.04 - 1934.136 * T;
-    const lambda = trueLongitude - 0.00569 - 0.00478 * Math.sin(degToRad(omega));
+    const lambda =
+        trueLongitude - 0.00569 - 0.00478 * Math.sin(degToRad(omega));
 
     // Calculate the Sun's right ascension and declination
     const epsilon = 23.439292 - 0.013004167 * T;
@@ -63,16 +64,16 @@ function calculateSunPosition() {
     const altitude = radToDeg(
         Math.asin(
             Math.sin(latitudeRad) * Math.sin(degToRad(delta)) +
-            Math.cos(latitudeRad) *
-            Math.cos(degToRad(delta)) *
-            Math.cos(degToRad(H)),
+                Math.cos(latitudeRad) *
+                    Math.cos(degToRad(delta)) *
+                    Math.cos(degToRad(H)),
         ),
     );
     const azimuth = radToDeg(
         Math.atan2(
             -Math.sin(degToRad(H)),
             Math.cos(latitudeRad) * Math.tan(degToRad(delta)) -
-            Math.sin(latitudeRad) * Math.cos(degToRad(H)),
+                Math.sin(latitudeRad) * Math.cos(degToRad(H)),
         ),
     );
 
