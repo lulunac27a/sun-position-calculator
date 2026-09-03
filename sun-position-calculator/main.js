@@ -9,7 +9,6 @@ const secondInput = document.getElementById('second');
 const degToRad = (deg) => deg * (Math.PI / 180);
 const radToDeg = (rad) => rad * (180 / Math.PI);
 function calculateSunPosition() {
-
     const latitude = parseFloat(latitudeInput.value);
     const longitude = parseFloat(longitudeInput.value);
     const latitudeRad = degToRad(latitude);
