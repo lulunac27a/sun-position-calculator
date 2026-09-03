@@ -15,12 +15,12 @@ function calculateSunPosition() {
     const longitude = parseFloat(longitudeInput.value);
     const latitudeRad = degToRad(latitude);
     const longitudeRad = degToRad(longitude);
-    const year = parseInt(yearInput.value);
-    const month = parseInt(monthInput.value);
-    const day = parseInt(dayInput.value);
-    const hour = parseInt(hourInput.value);
-    const minute = parseInt(minuteInput.value);
-    const second = parseInt(secondInput.value);
+    const year = parseInt(yearInput.value, 10);
+    const month = parseInt(monthInput.value, 10);
+    const day = parseInt(dayInput.value, 10);
+    const hour = parseInt(hourInput.value, 10);
+    const minute = parseInt(minuteInput.value, 10);
+    const second = parseInt(secondInput.value, 10);
 
     const JD = dateToJulianDate(year, month, day, hour, minute, second);
     const T = (JD - 2451545.0) / 36525.0;

@@ -13,10 +13,10 @@ function calculateSunPosition() {
     const longitude = parseFloat(longitudeInput.value);
     const latitudeRad = degToRad(latitude);
     const longitudeRad = degToRad(longitude);
-    const month = parseInt(monthInput.value);
-    const day = parseInt(dayInput.value);
-    const hour = parseInt(hourInput.value);
-    const minute = parseInt(minuteInput.value);
+    const month = parseInt(monthInput.value, 10);
+    const day = parseInt(dayInput.value, 10);
+    const hour = parseInt(hourInput.value, 10);
+    const minute = parseInt(minuteInput.value, 10);
     const dayOfYear = getDayOfYear(month, day);
     const eqOfTime = calculateEquationOfTime(dayOfYear);
     const solarDeclination = calculateSolarDeclination(dayOfYear);
