@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Sun Position Calculator</title>
+  </head>
+  <body>
+    <h1>Sun Position Calculator</h1>
+    Latitude: <input type="number" id="latitude" step="0.0001" value="0"><br>
+    Longitude: <input type="number" id="longitude" step="0.0001" value="0"><br>
+    Month: <input type="number" id="month" min="1" max="12" value="1"><br>
+    Day: <input type="number" id="day" min="1" max="31" value="1"><br>
+    Hour: <input type="number" id="hour" min="0" max="23" value="12"><br>
+    Minute: <input type="number" id="minute" min="0" max="59" value="0"><br>
+    <button id="calculate">Calculate</button>
+    <div id="result">
+        Altitude: <span id="altitude"></span><br>
+        Azimuth: <span id="azimuth"></span>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
