@@ -8,6 +8,8 @@ const minuteInput = document.getElementById('minute');
 const secondInput = document.getElementById('second');
 const degToRad = (deg) => deg * (Math.PI / 180);
 const radToDeg = (rad) => rad * (180 / Math.PI);
+const calculateButton = document.getElementById('calculate');
+calculateButton.addEventListener('click', calculateSunPosition);
 function calculateSunPosition() {
     const latitude = parseFloat(latitudeInput.value);
     const longitude = parseFloat(longitudeInput.value);
