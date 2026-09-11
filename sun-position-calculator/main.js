@@ -65,16 +65,16 @@ function calculateSunPosition() {
     const altitude = radToDeg(
         Math.asin(
             Math.sin(latitudeRad) * Math.sin(degToRad(delta)) +
-            Math.cos(latitudeRad) *
-            Math.cos(degToRad(delta)) *
-            Math.cos(degToRad(H)),
+                Math.cos(latitudeRad) *
+                    Math.cos(degToRad(delta)) *
+                    Math.cos(degToRad(H)),
         ),
     ); //altitude of the sun
     const azimuth = radToDeg(
         Math.atan2(
             -Math.sin(degToRad(H)),
             Math.cos(latitudeRad) * Math.tan(degToRad(delta)) -
-            Math.sin(latitudeRad) * Math.cos(degToRad(H)),
+                Math.sin(latitudeRad) * Math.cos(degToRad(H)),
         ),
     ); //azimuth of the sun
 
